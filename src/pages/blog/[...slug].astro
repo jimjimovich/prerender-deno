@@ -1,4 +1,5 @@
 ---
+export const prerender = true;
 import { CollectionEntry, getCollection } from 'astro:content';
 import BlogPost from '../../layouts/BlogPost.astro';
 
@@ -13,6 +14,7 @@ type Props = CollectionEntry<'blog'>;
 
 const post = Astro.props;
 const { Content } = await post.render();
+
 ---
 
 <BlogPost {...post.data}>
